@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <center>
+      <button onclick="grid()" class="button-64" role="button">
+        <span class="text">change grid</span>
+      </button>
+    </center>
+    <div class="container" id="container"></div>
+
+    <script async defer>
+      const container = document.getElementById("container");
+      function grid() {
+        let choice = prompt("give me  your choice to grid");
+
+        if (choice > 100) {
+          alert("that a lot of grid");
+        } else {
+          for (let index = 0; index < choice; index++) {
+            let divs = document.createElement("div");
+            divs.setAttribute("class", "grid");
+            divs.textContent = "grid" + index;
+            container.appendChild(divs);
+          }
+        }
+      }
+
+      // Step 3: Set the text content for the new div
+
+      // Step 4: Append the new div to the container
+    </script>
+  </body>
+</html>
